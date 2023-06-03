@@ -8,7 +8,6 @@ import 'route_configuration/route_configuration.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
   final appBindings = AppBindings();
   appBindings.dependencies();
