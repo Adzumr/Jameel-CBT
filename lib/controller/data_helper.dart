@@ -37,7 +37,7 @@ class DataHelper {
     "2. What are the uses of benzene",
     "3. What are the physical and chemical properties of benzene",
   ];
-  static List<JameelQuestionModel> jameelQuestions = [
+  static List<JameelQuestionModel> jameelQuestionsBank = [
     JameelQuestionModel(
       question:
           "The term aromatic was first used to describe a group of compounds which have________",
@@ -152,4 +152,6 @@ class DataHelper {
       isImage: null,
     ),
   ];
+
+
 }

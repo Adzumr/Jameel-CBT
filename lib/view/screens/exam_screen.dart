@@ -37,9 +37,9 @@ class _ExamsScreenState extends State<ExamsScreen> {
             selectedOption.value = null;
             debugPrint("Page Changed: $value");
           },
-          itemCount: DataHelper.jameelQuestions.length,
+          itemCount: DataHelper.jameelQuestionsBank.length,
           itemBuilder: (context, index) {
-            final question = DataHelper.jameelQuestions[index];
+            final question = DataHelper.jameelQuestionsBank[index];
 
             /// Jameel CBT
             return Container(
@@ -49,7 +49,7 @@ class _ExamsScreenState extends State<ExamsScreen> {
                 children: [
                   Center(
                     child: Text(
-                      "${questionController.questionCount! + 1}/${DataHelper.jameelQuestions.length}",
+                      "${questionController.questionCount! + 1}/${DataHelper.jameelQuestionsBank.length}",
                       style: AppFonts.subHeadingStyle,
                     ),
                   ),
@@ -227,7 +227,7 @@ class _ExamsScreenState extends State<ExamsScreen> {
                         onPressed: () async {
                           questionController.incrementCounter();
                           questionController.questionCount! ==
-                                  DataHelper.jameelQuestions.length
+                                  DataHelper.jameelQuestionsBank.length
                               ? Get.to(Get.toNamed(AppRouteNames.result))
                               : pageController.nextPage(
                                   duration: const Duration(
